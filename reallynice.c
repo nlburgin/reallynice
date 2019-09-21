@@ -28,7 +28,7 @@ int main(int argc, char **argv){
   nice(atoi(Nice));
   
   setuid(prev_user);
-	setgid(prev_group);
+  setgid(prev_group);
   execvp(*argv,argv);
   
   stdout = stderr;
