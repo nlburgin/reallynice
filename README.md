@@ -58,7 +58,7 @@ If you want manual control over process priority (or to prevent blatant priority
 
 * The nuclear option of using `chrt -f` to bypass autogroups using `SCHED_FIFO` for something you don't want to have cpu time stolen from by lower-priority processes. Of course this only works on interactive processes as opposed to batch ones, or else your system could hang. While it's a clumsy solution, notably this is an option that someone who isn't aware of autogroups might still come up with on their own.
 
-## Excerpt `from man_7_sched`:
+## Excerpt from `man 7 sched`:
 
 >**The** **autogroup** **feature** 
 >
