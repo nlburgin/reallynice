@@ -1,7 +1,7 @@
 # reallynice
 replacement for nice/renice that doesn't get placebo'd by autogrouping
 
-##usage
+## usage
 
 `reallynice NICELEVEL COMMAND [ARGS...]`
 
@@ -9,7 +9,7 @@ replacement for nice/renice that doesn't get placebo'd by autogrouping
 
 The programs are setuid-capable. While they will work without the setuid bit set, setting their owner to root and turning on their suid bits will allow high priorities to be set without using a root shell or `sudo`.
 
-##example use case
+## example use case
 
 *Make Folding@Home run at *actually* low priority, like it's supposed to:*
 
@@ -23,7 +23,7 @@ The programs are setuid-capable. While they will work without the setuid bit set
 $ reallynice 15 make -j16
 ```
 
-##building and installing
+## building and installing
 
 ```bash
 $ gcc -O2 -o reallynice reallynice.c
@@ -32,7 +32,7 @@ $ sudo cp -t /usr/local/bin/ reallynice really_renice
 ```
 
 
-##background
+## background
 
 Linux has a feature called 'autogrouping', which is enabled by default on most systems, for scheduling processes (see manual page excerpt below). Essentially it causes the scheduler to act primarily on the nice level set for process *groups* rather than individual processes.
 
@@ -58,7 +58,7 @@ If you want manual control over process priority (or to prevent blatant priority
 
 * The nuclear option of using `chrt -f` to bypass autogroups using `SCHED_FIFO` for something you don't want to have cpu time stolen from by lower-priority processes. Of course this only works on interactive processes as opposed to batch ones, or else your system could hang. While it's a clumsy solution, notably this is an option that someone who isn't aware of autogroups might still come up with on their own.
 
-##Excerpt from man_7_sched:
+## Excerpt `from man_7_sched`:
 
 >**The** **autogroup** **feature** 
 >
