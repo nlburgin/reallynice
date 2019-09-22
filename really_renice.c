@@ -7,7 +7,7 @@
 #include <sys/resource.h>
 
 
-#define usage "Usage: really_renice nicelevel pid..."
+#define usage "Usage: really_renice nicelevel pid"
 
 char buffer[512];
 
