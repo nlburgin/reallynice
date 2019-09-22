@@ -15,9 +15,9 @@ int main(int argc, char **argv){
   }
   
   const uid_t prev_user = getuid();
-	const gid_t prev_group = getgid();
-	setuid(0);	
-	setgid(0);
+  const gid_t prev_group = getgid();
+  setuid(0);	
+  setgid(0);
   
   
   argv++;
