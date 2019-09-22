@@ -34,7 +34,7 @@ $ sudo cp -t /usr/local/bin/ reallynice really_renice
 
 ## background
 
-Linux has a feature called 'autogrouping', which is enabled by default on most systems, for scheduling processes (see manual page excerpt below). Essentially it causes the scheduler to act primarily on the nice level set for process *groups* rather than individual processes.
+Linux has a feature called 'autogrouping', which is enabled by default on some systems, for scheduling processes (see manual page excerpt below). Essentially it causes the scheduler to act primarily on the nice level set for process *groups* rather than individual processes.
 
 This generally improves responsiveness and fairness for typical use cases where the nice value is always left untouched at zero anyway, by not giving a task which is split into many processes a larger share of cpu time than one that is a single process despite having the same nice level. While your desktop session (including all apps launched through graphical launchers) typically shares one autogroup, opening a terminal window (which is typically where cpu-heavy background tasks are launched) creates a new autogroup, and background services generally have their own autogroups as well.
 
