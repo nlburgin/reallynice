@@ -5,7 +5,7 @@ replacement for nice/renice that doesn't get placebo'd by autogrouping
 
 `reallynice NICELEVEL COMMAND [ARGS...]`
 
-`really_renice NICELEVEL PID`
+`really_renice NICELEVEL PID...`
 
 The programs are setuid-capable. While they will work without the setuid bit set, setting their owner to root and turning on their suid bits will allow high priorities to be set without using a root shell or `sudo`.
 
