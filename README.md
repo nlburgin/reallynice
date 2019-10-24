@@ -14,7 +14,7 @@ The programs are setuid-capable. While they will work without the setuid bit set
 *Make Folding@Home run at *actually* low priority, like it's supposed to:*
 
 ```bash
-$ sudo really_renice 19 `pgrep FahCore`
+$ sudo really_renice 19 `pgrep -w FahCore`
 ```
 
 *Run a low-priority software build job:*
